@@ -5,7 +5,7 @@ import datetime
 def about(sender):
     rumps.alert("Simple work week app")
 
-@rumps.timer(3600)  # create a new thread that calls the decorated function every 4 seconds
+@rumps.timer(3600)  # create a new thread that calls the decorated function every hour
 def update_ww(sender):
     week = datetime.datetime.now().isocalendar()[1]
     app.title = 'WW{}'.format(week)
